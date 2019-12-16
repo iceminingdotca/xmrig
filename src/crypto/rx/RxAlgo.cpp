@@ -40,6 +40,9 @@ xmrig::Algorithm::Id xmrig::RxAlgo::apply(Algorithm::Id algorithm)
 const RandomX_ConfigurationBase *xmrig::RxAlgo::base(Algorithm::Id algorithm)
 {
     switch (algorithm) {
+		case Algorithm::RX_LUX:
+			  return &RandomX_LuxConfig;
+
     case Algorithm::RX_WOW:
         return &RandomX_WowneroConfig;
 

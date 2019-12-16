@@ -82,6 +82,18 @@ RandomX_ConfigurationLoki::RandomX_ConfigurationLoki()
 	RANDOMX_FREQ_CBRANCH = 16;
 }
 
+RandomX_ConfigurationLoki::RandomX_ConfigurationLux()
+{
+  ArgonIterations = 4;
+  ArgonLanes = 2;
+  ArgonSalt = "RandomXL\x12";
+  ProgramSize = 320;
+  ProgramCount = 7;
+  ScratchpadL2_Size = 262144;
+  ScratchpadL3_Size = 524288;
+}
+
+
 RandomX_ConfigurationArqma::RandomX_ConfigurationArqma()
 {
 	ArgonIterations = 1;
@@ -263,6 +275,7 @@ void RandomX_ConfigurationBase::Apply()
 #undef INST_HANDLE
 }
 
+RandomX_ConfigurationLux RandomX_LuxConfig;
 RandomX_ConfigurationMonero RandomX_MoneroConfig;
 RandomX_ConfigurationWownero RandomX_WowneroConfig;
 RandomX_ConfigurationLoki RandomX_LokiConfig;
